@@ -1,16 +1,19 @@
+#ifndef AUTOMATE_H
+#define AUTOMATE_H
 #include <vector>
-#include "symbole.h"
+#include "./symbole/symbole.h"
 #include "lexer.h"
+#include "./etats/etat.h"
+#include "./etats/E0.h"
 #include <string>
-class Etat;
-class E0;
 using namespace std;
+class Etat;
 
 class Automate
 {
 public:
-    Automate(string s){};
-    ~Automate(){};
+    Automate(string s);
+    ~Automate();
     void eval();
     void decalage(Symbole *s, Etat *e);
     void reduction(int n, Symbole *s);
@@ -21,3 +24,5 @@ protected:
     Lexer *lexer;
     Symbole *symbole;
 };
+
+#endif

@@ -1,12 +1,18 @@
 #include "E0.h"
-#include "../symbole/symbole.h"
+#include "E1.h"
+#include "E2.h"
+#include "E3.h"
 
 E0::E0() : Etat()
 {
 }
 
-E0::E0()
+E0::~E0()
 {
+}
+
+void E0::print() const {
+    cout << "Etat 0" << endl;
 }
 
 bool E0::transition(Automate &automate, Symbole *symbole)

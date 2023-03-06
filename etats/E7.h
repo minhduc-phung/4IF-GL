@@ -1,3 +1,5 @@
+#ifndef E7_H
+#define E7_H
 #include "etat.h"
 
 class E7 : public Etat
@@ -8,3 +10,5 @@ public:
     void print() const;
     bool transition(Automate &automate, Symbole *symbole);
 };
+
+#endif

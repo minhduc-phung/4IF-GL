@@ -1,6 +1,4 @@
 #include "automate.h"
-#include "etat.h"
-#include "./etats/E0.h"
 
 Automate::Automate(string s)
 {
@@ -8,7 +6,19 @@ Automate::Automate(string s)
     pileEtats.push_back(new E0());
 }
 
-void Automate::eval() {}
+void Automate::eval()
+{
+    bool retourTransition = true;
+    while (retourTransition)
+    {
+        Symbole *symbole = lexer->GetNext(true);
+        retourTransition = pileEtats.back()->transition(*this, symbole);
+    }
+
+    cout << "Fin de la lecture" << endl;
+    for (int i = 0; i < pileSymboles.size(); ++i)
+        cout << pileSymboles[i]->eval() << endl;
+}
 
 void Automate::decalage(Symbole *s, Etat *e)
 {

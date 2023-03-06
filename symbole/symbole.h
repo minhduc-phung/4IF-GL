@@ -1,6 +1,8 @@
 #pragma once
-
+#ifndef SYMBOLE_H
+#define SYMBOLE_H
 #include <string>
+#include <iostream>
 using namespace std;
 
 enum Identificateurs
@@ -20,11 +22,15 @@ const string Etiquettes[] = {"EXPR", "OPENPAR", "CLOSEPAR", "PLUS", "MULT", "INT
 class Symbole
 {
 public:
-   Symbole(int i) : ident(i) {}
-   virtual ~Symbole() {}
+   Symbole(int i);
+   Symbole();
+   virtual ~Symbole();
    operator int() const { return ident; }
+   virtual int eval();
    virtual void Affiche();
 
 protected:
    int ident;
 };
+
+#endif

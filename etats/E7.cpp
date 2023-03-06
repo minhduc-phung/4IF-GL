@@ -1,19 +1,20 @@
-#include "E9.h"
+#include "E7.h"
+#include "E5.h"
 
-E9::E9() : Etat()
+E7::E7() : Etat()
 {
 }
 
-E9::~E9()
+E7::~E7()
 {
 }
 
-void E9::print() const
+void E7::print() const
 {
-    cout << "Etat 9" << endl;
+    cout << "Etat 7" << endl;
 }
 
-bool E9::transition(Automate &automate, Symbole *s)
+bool E7::transition(Automate &automate, Symbole *s)
 {
     this->print();
     switch (*s)
@@ -22,7 +23,7 @@ bool E9::transition(Automate &automate, Symbole *s)
         automate.reduction(3, s);
         break;
     case MULT:
-        automate.reduction(3, s);
+        automate.decalage(s, new E5());
         break;
     case CLOSEPAR:
         automate.reduction(3, s);

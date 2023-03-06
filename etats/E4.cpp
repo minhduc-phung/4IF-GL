@@ -1,21 +1,22 @@
+#include "E4.h"
 #include "E2.h"
 #include "E3.h"
-#include "E6.h"
+#include "E7.h"
 
-E2::E2() : Etat()
+E4::E4() : Etat()
 {
 }
 
-E2::~E2()
+E4::~E4()
 {
 }
 
-void E2::print() const
+void E4::print() const
 {
-    cout << "Etat 2" << endl;
+    cout << "Etat 4" << endl;
 }
 
-bool E2::transition(Automate &automate, Symbole *s)
+bool E4::transition(Automate &automate, Symbole *s)
 {
     this->print();
     switch (*s)
@@ -27,7 +28,7 @@ bool E2::transition(Automate &automate, Symbole *s)
         automate.decalage(s, new E2());
         break;
     case EXPR:
-        automate.decalage(s, new E6());
+        automate.decalage(s, new E7());
         break;
     default:
         return false;
