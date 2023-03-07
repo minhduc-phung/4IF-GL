@@ -1,6 +1,14 @@
+/*************************************************************************
+                           Etat 5
+                             -------------------
+    début                : 28 février 2023
+    copyright            : (C) 2023 par NGO Ngoc Minh, PHUNG Minh
+*************************************************************************/
+
 #ifndef E5_H
 #define E5_H
 #include "etat.h"
+#include "../automate.h"
 
 class E5 : public Etat
 {

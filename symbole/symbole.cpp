@@ -4,12 +4,20 @@ Symbole::Symbole(int i) : ident(i) {
 
 }
 
+Symbole::Symbole() {
+   
+}
+
 Symbole::~Symbole() {
 
 }
 
+int Symbole::getIdent() {
+   return ident;
+}
+
 int Symbole::eval() {
-   return 0;
+   return -1;
 }
 
 void Symbole::Affiche() {

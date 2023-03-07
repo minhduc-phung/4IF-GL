@@ -15,19 +15,19 @@ void E0::print() const {
     cout << "Etat 0" << endl;
 }
 
-bool E0::transition(Automate &automate, Symbole *symbole)
+bool E0::transition(Automate &automate, Symbole *s)
 {
     this->print();
-    switch (*symbole)
+    switch (*s)
     {
     case EXPR:
-        automate.decalage(symbole, new E1());
+        automate.decalage(s, new E1());
         break;
     case INT:
-        automate.decalage(symbole, new E3());
+        automate.decalage(s, new E3());
         break;
     case OPENPAR:
-        automate.decalage(symbole, new E2());
+        automate.decalage(s, new E2());
         break;
     default:
         return false;

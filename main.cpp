@@ -5,13 +5,14 @@
 using namespace std;
 
 
-int main(void) {
-   string chaine("(1+34)*123");
-
-   /* Symbole * s;
+int main() {
+   string chaine("1+2*33");
+   
+   /*Lexer l(chaine);
+   Symbole * s;
    while(*(s=l.Consulter())!=FIN) {
       s->Affiche();
-      cout<<endl;
+      cout<< "   " << s->eval() << endl;
       l.Avancer();
    } */
    Automate automate(chaine);

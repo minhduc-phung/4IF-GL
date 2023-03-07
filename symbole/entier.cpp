@@ -7,5 +7,9 @@ Entier::Entier(int v) : Symbole(INT) {
 void Entier::Affiche()
 {
     Symbole::Affiche();
-    cout << "(" << this->valeur << ")" << endl;
+    cout << "(" << this->valeur << ")";
+}
+
+int Entier::eval() {
+    return this->valeur;
 }

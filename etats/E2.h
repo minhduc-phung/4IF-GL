@@ -1,6 +1,14 @@
+/*************************************************************************
+                           Etat 2
+                             -------------------
+    début                : 28 février 2023
+    copyright            : (C) 2023 par NGO Ngoc Minh, PHUNG Minh
+*************************************************************************/
+
 #ifndef E2_H
 #define E2_H
 #include "etat.h"
+#include "../automate.h"
 
 class E2 : public Etat
 {

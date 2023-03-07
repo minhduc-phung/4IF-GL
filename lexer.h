@@ -1,3 +1,10 @@
+/*************************************************************************
+                           Lexer
+                             -------------------
+    début                : 28 février 2023
+    copyright            : (C) 2023 par NGO Ngoc Minh, PHUNG Minh
+*************************************************************************/
+
 #pragma once
 #ifndef LEXER_H
 #define LEXER_H
@@ -16,7 +23,7 @@ class Lexer {
    public:
       Lexer(string s) : flux(s), tete(0), tampon(nullptr) { }
       ~Lexer() { }
-      Symbole* GetNext(bool eat);
+      void PutSymbol(Symbole *s);
       Symbole * Consulter();
       void Avancer();
 
