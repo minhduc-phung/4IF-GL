@@ -34,7 +34,6 @@ public:
    virtual ~Symbole();
    operator int() const { return ident; }
    virtual int eval();
-   int getIdent();
    virtual void Affiche();
 
 protected:

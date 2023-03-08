@@ -59,15 +59,15 @@ int Automate::calcul(vector<Symbole *> tab)
     }
     else if (tab.size() == 3)
     {
-        if (tab[0]->getIdent() == OPENPAR)
+        if (int(*tab[0]) == OPENPAR)
         {
             return tab[1]->eval();
         }
-        else if (tab[1]->getIdent() == PLUS)
+        else if (int(*tab[1]) == PLUS)
         {   
             return Plus((Expression*) tab[0], (Expression*) tab[2]).eval();
         }
-        else if (tab[1]->getIdent() == MULT)
+        else if (int(*tab[1]) == MULT)
         {
             return Mult((Expression*) tab[0], (Expression*) tab[2]).eval();
         }

@@ -12,10 +12,6 @@ Symbole::~Symbole() {
 
 }
 
-int Symbole::getIdent() {
-   return ident;
-}
-
 int Symbole::eval() {
    return -1;
 }
