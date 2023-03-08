@@ -1,22 +1,20 @@
 /*************************************************************************
-                           Etat 4
+                           Fin
                              -------------------
     début                : 28 février 2023
     copyright            : (C) 2023 par NGO Ngoc Minh, PHUNG Minh
 *************************************************************************/
 
-#ifndef E4_H
-#define E4_H
-#include "etat.h"
-#include "../automate.h"
+#ifndef FIN_H
+#define FIN_H
+#include "expressionConstante.h"
 
-class E4 : public Etat
-{
-public:
-    E4();
-    ~E4();
-    void print() const;
-    bool transition(Automate &automate, Symbole *symbole);
+class Fin : public ExpressionConstante {
+    public:
+        Fin();
+        ~Fin() {}
+        int eval();
+        void Affiche();
 };
 
 #endif

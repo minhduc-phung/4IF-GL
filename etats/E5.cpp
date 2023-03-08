@@ -1,33 +1,34 @@
-#include "E0.h"
-#include "E1.h"
+#include "E5.h"
 #include "E2.h"
 #include "E3.h"
+#include "E8.h"
 
-E0::E0() : Etat()
+E5::E5() : Etat()
 {
 }
 
-E0::~E0()
+E5::~E5()
 {
 }
 
-void E0::print() const {
-    cout << "Etat 0" << endl;
+void E5::print() const
+{
+    cout << "Etat 5" << endl;
 }
 
-bool E0::transition(Automate &automate, Symbole *s)
+bool E5::transition(Automate &automate, Symbole *s)
 {
     this->print();
     switch (*s)
     {
-    case EXPR:
-        automate.decalage(s, new E1());
-        break;
     case INT:
         automate.decalage(s, new E3());
         break;
     case OPENPAR:
         automate.decalage(s, new E2());
+        break;
+    case EXPR:
+        automate.decalage(s, new E8());
         break;
     default:
         return false;

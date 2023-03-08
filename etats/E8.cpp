@@ -1,23 +1,23 @@
-#include "E9.h"
+#include "E8.h"
 #include "../symbole/plus.h"
 #include "../symbole/mult.h"
 #include "../symbole/closePar.h"
 #include "../symbole/fin.h"
 
-E9::E9() : Etat()
+E8::E8() : Etat()
 {
 }
 
-E9::~E9()
+E8::~E8()
 {
 }
 
-void E9::print() const
+void E8::print() const
 {
-    cout << "Etat 9" << endl;
+    cout << "Etat 8" << endl;
 }
 
-bool E9::transition(Automate &automate, Symbole *s)
+bool E8::transition(Automate &automate, Symbole *s)
 {
     this->print();
     switch (*s)
