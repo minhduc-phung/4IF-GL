@@ -1,38 +1,38 @@
-#include "E9.h"
+#include "E3.h"
 #include "../symbole/plus.h"
 #include "../symbole/mult.h"
 #include "../symbole/closePar.h"
 #include "../symbole/fin.h"
 
-E9::E9() : Etat()
+E3::E3() : Etat()
 {
 }
 
-E9::~E9()
+E3::~E3()
 {
 }
 
-void E9::print() const
+void E3::print() const
 {
-    cout << "Etat 9" << endl;
+    cout << "Etat 3" << endl;
 }
 
-bool E9::transition(Automate &automate, Symbole *s)
+bool E3::transition(Automate &automate, Symbole *s)
 {
     this->print();
     switch (*s)
     {
     case PLUS:
-        automate.reduction(3, new Plus());
+        automate.reduction(1, new Plus());
         break;
     case MULT:
-        automate.reduction(3, new Mult());
+        automate.reduction(1, new Mult());
         break;
     case CLOSEPAR:
-        automate.reduction(3, new ClosePar());
+        automate.reduction(1, new ClosePar());
         break;
     case FIN:
-        automate.reduction(3, new Fin());
+        automate.reduction(1, new Fin());
         break;
     default:
         return false;

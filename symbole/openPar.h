@@ -1,22 +1,20 @@
 /*************************************************************************
-                           Etat 4
+                           OpenPar
                              -------------------
     début                : 28 février 2023
     copyright            : (C) 2023 par NGO Ngoc Minh, PHUNG Minh
 *************************************************************************/
 
-#ifndef E4_H
-#define E4_H
-#include "etat.h"
-#include "../automate.h"
+#ifndef OPENPAR_H
+#define OPENPAR_H
+#include "expressionConstante.h"
 
-class E4 : public Etat
-{
-public:
-    E4();
-    ~E4();
-    void print() const;
-    bool transition(Automate &automate, Symbole *symbole);
+class OpenPar : public ExpressionConstante {
+    public:
+        OpenPar();
+        ~OpenPar() {}
+        int eval();
+        void Affiche();
 };
 
 #endif
